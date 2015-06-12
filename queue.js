@@ -1,6 +1,5 @@
 "use strict";
-var ioLoader = require('socket.io');
-var http = require('http');
+var io = require('socket.io').listen('12345');
 
 var handler = function(req,res){
 	res.writeHead(404, {'Content-Type': 'text/html'});
@@ -9,14 +8,6 @@ var handler = function(req,res){
 
 var fun = function() {
 	var queue = []; 
-
-	// setup HTTP server
-	var app = http.createServer(handler);
-
-	app.listen("12345"); 
-
-	// now use the connect io to http
-	var io = ioLoader(app);
 
 	// add a connection listener
 	io.on('connection', function(socket){
