@@ -7,9 +7,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/snowmac/node_producer_consumer_challenge"
+    "url": "https://github.com/snowmac/code_challenge_producer_consumer"
   },
   "dependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.3",
     "socket.io": "^1.3.5",
     "socket.io-client": "^1.3.5"
   }
