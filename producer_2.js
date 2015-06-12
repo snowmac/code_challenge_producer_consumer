@@ -15,9 +15,9 @@ var pushData = function(data){
 	}
 };
 
-var producer_2 = function(){ 
+var producer_1 = function(){ 
 	socket.on('connect', function(data) { 
-	    console.log('Producer 2 Connected!');
+	    console.log('Producer 1 Connected!');
 		socket.emit('push',{value:produceRandomAddition()}); 
 	});
 
@@ -30,4 +30,4 @@ var producer_2 = function(){
 	});
 };
 
-module.exports = producer_2; 
+module.exports = producer_1; 
